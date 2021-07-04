@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textResult"
+        style="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textColor="@color/design_default_color_primary"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textResultSubtitle"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:text="@string/bmi" />
+
+    <TextView
+        android:id="@+id/textResultSubtitle"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textHeight"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="0dp"
+        android:text="@string/result_subtitle"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+    <!-- https://developer.android.com/guide/topics/resources/string-resource#FormattingAndStyling -->
+    <TextView
+        android:id="@+id/textHeight"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/editHeight"
+        android:layout_alignStart="@id/editHeight"
+        android:layout_marginTop="24dp"
+        android:labelFor="@id/editHeight"
+        android:text="@string/height"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:hint="@string/height" />
+
+    <TextView
+        android:id="@+id/textWeight"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editHeight"
+        android:layout_marginTop="32dp"
+        android:layout_alignStart="@id/editWeight"
+        android:labelFor="@id/editPeso"
+        android:text="@string/weight" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textWeight"
+        android:layout_marginHorizontal="32dp"
+        android:hint="@string/weight" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:text="@string/calculate" />
+
+</RelativeLayout>

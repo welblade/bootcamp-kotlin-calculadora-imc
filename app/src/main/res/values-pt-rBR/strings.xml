@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Calculadora IMC</string>
+    <string name="bmi">IMC</string>
+    <string name="result_subtitle">%1$d Kg %2$s do peso ideal</string>
+    <string name="above">acima</string>
+    <string name="bellow">abaixo</string>
+    <string name="height">Altura</string>
+    <string name="weight">Peso</string>
+    <string name="calculate">Calcular</string>
+    bellow
 </resources>

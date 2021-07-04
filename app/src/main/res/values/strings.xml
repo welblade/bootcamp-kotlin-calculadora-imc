@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">IMC Calculator</string>
+    <string name="bmi">BMI</string>
+    <string name="result_subtitle">%1$d Kg %2$s the ideal weight</string>
+    <string name="above">above</string>
+    <string name="bellow">bellow</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="calculate">Calculate</string>
 </resources>
