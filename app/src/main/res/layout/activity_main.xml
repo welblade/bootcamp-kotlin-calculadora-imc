@@ -11,99 +11,115 @@
 
     <TextView
         android:id="@+id/textResult"
-        style="@style/TextAppearance.MaterialComponents.Headline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/textResultSubtitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline01"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
+        app:layout_constraintBottom_toTopOf="@+id/textResultSubtitle"
         app:layout_constraintVertical_bias="1.0"
         android:paddingHorizontal="16dp"
         android:paddingVertical="8dp"
-        android:text="@string/bmi"
+        style="@style/TextAppearance.MaterialComponents.Headline3"
         android:textColor="@color/design_default_color_primary"
         android:textStyle="bold"
+        android:text="@string/bmi"
          />
 
     <TextView
         android:id="@+id/textResultSubtitle"
-        style="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline01"
         app:layout_constraintBottom_toTopOf="@+id/editHeight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
         android:layout_marginBottom="40dp"
-        android:text="@string/result_subtitle"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:textColor="@color/design_default_color_primary_variant"
         android:visibility="invisible"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:text="@string/result_subtitle"/>
     <!-- https://developer.android.com/guide/topics/resources/string-resource#FormattingAndStyling -->
     <TextView
         android:id="@+id/textHeight"
-        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/editHeight"
         app:layout_constraintStart_toStartOf="@+id/editHeight"
         android:contentDescription="@string/height"
         android:labelFor="@id/editHeight"
-        android:text="@string/height"
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:visibility="invisible"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:text="@string/height"/>
 
     <EditText
         android:id="@+id/editHeight"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline01"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginHorizontal="32dp"
-        android:hint="@string/height"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        tools:ignore="LabelFor"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
-        tools:ignore="LabelFor" />
+        android:hint="@string/height"
+         />
 
     <TextView
         android:id="@+id/textWeight"
-        style="@style/TextAppearance.MaterialComponents.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/editWeight"
         app:layout_constraintStart_toStartOf="@+id/editWeight"
         android:labelFor="@id/editWeight"
-        android:text="@string/weight"
+        style="@style/TextAppearance.MaterialComponents.Caption"
         android:visibility="invisible"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:text="@string/weight"/>
 
     <EditText
         android:id="@+id/editWeight"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline01"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/editHeight"
         android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="32dp"
-        android:hint="@string/weight"
+        android:layout_marginHorizontal="16dp"
+        tools:ignore="LabelFor"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
-        tools:ignore="LabelFor" />
+        android:hint="@string/weight"
+         />
 
     <Button
         android:id="@+id/buttonCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline01"
         app:layout_constraintTop_toBottomOf="@+id/editWeight"
+        app:layout_constraintEnd_toEndOf="@id/guideline12"
         android:layout_marginTop="32dp"
         android:paddingVertical="8dp"
         android:text="@string/calculate"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.083" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
